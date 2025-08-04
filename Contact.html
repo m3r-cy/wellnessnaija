@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Contact Us - MediNaija</title>
+  <link rel="stylesheet" href="css/style.css"/>
+</head>
+<body>
+  <header>
+    <nav>
+      <h2>MediNaija</h2>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="courses.html">Courses</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="blog.html">Blog</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="contact">
+    <h1>Contact Us</h1>
+    <form id="contactForm">
+      <input type="text" placeholder="Your Name" required style="width:100%; padding:10px; margin:10px 0;">
+      <input type="email" placeholder="Your Email" required style="width:100%; padding:10px; margin:10px 0;">
+      <textarea placeholder="Your Message" rows="5" required style="width:100%; padding:10px; margin:10px 0;"></textarea>
+      <button type="submit" style="background:#008753; color:white; padding:10px 20px; border:none; cursor:pointer;">
+        Send Message
+      </button>
+    </form>
+  </main>
+
+  <script>
+    document.getElementById("contactForm").addEventListener("submit", (e) => {
+      e.preventDefault();
+      alert("Thank you! We'll get back to you soon.");
+      e.target.reset();
+    });
+  </script>
+</body>
+</html>

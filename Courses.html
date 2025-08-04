@@ -1,0 +1,47 @@
+<!-- courses.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Courses - MediNaija</title>
+  <link rel="stylesheet" href="css/style.css"/>
+</head>
+<body>
+  <header>
+    <nav>
+      <h2>MediNaija</h2>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="courses.html">Courses</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="blog.html">Blog</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="courses">
+    <h1>Medical Courses</h1>
+    <div id="course-list"></div>
+  </main>
+
+  <script src="courses-data.js"></script>
+  <script>
+    const courseList = document.getElementById("course-list");
+    
+    courses.forEach(course => {
+      const div = document.createElement("div");
+      div.innerHTML = `
+        <h2>${course.title}</h2>
+        <p>${course.description}</p>
+        <a href="https://www.google.com/search?q=${encodeURIComponent(course.title)}" target="_blank">
+          Learn More on Google
+        </a>
+      `;
+      div.style.margin = "1.5rem 0"; color: "#000";
+      courseList.appendChild(div);
+    });
+  </script>
+</body>
+</html>
